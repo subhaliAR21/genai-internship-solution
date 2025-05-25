@@ -1,5 +1,5 @@
 # GenAI Engineer(Image/Video) Intern Challenge: Ad Variation Generator (Stipend - Rs. 20,000 Remote / Rs. 25,000 On-Site (Negotiable))
-We’re growing our tech team at Powersmy.biz (https://powersmy.biz/) and have an exciting paid internship opportunities for students who love solving real-world problems and building impactful products. If you’re passionate about tech and ready to dive into fast-paced projects, we want you! 🙌
+We’re growing our tech team at Powersmy.biz (https://powersmy.biz/) and have an exciting paid internship opportunity for students who love solving real-world problems and building impactful products. If you’re passionate about tech and ready to dive into fast-paced projects, we want you! 🙌
 
 ## Challenge Overview
 Build a simple AI-powered ad variation generator that creates both image and video advertisements based on product information. This challenge tests your ability to work with generative AI models for multimedia content creation.
