@@ -1,4 +1,4 @@
-# GenAI Engineer Challenge: Ad Variation Generator
+# GenAI Engineer(Image/Video) Intern Challenge: Ad Variation Generator (Stipend - Rs. 20,000 Remote / Rs 25,000 On-Site (Negotiable))
 
 ## Challenge Overview
 Build a simple AI-powered ad variation generator that creates both image and video advertisements based on product information. This challenge tests your ability to work with generative AI models for multimedia content creation.
@@ -43,3 +43,5 @@ Build a simple AI-powered ad variation generator that creates both image and vid
 - Optimize for performance/cost
 
 This challenge is designed to be completed in a single day while demonstrating your skills with generative AI models and application development.
+
+For queries, email at founders@powersmy.biz ✉️ !!
