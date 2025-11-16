@@ -1,86 +1,86 @@
-# Ad Variation Generator
+# Ad Variation Generator 🚀
 
 ## Project Overview
-This project is a web application that allows users to generate ad variations based on product information. Users input a product name, description, and target audience, and the app generates 3 static image ad variations and 1 short video ad. Users can view and download the generated content.
 
-## Features
-- Input form for product name, description, and target audience.
-- Generates 3 static image ads (currently dummy images).
-- Generates 1 short video ad (currently a dummy video).
-- Displays generated ads with download links.
-- Basic error handling and loading states.
-- Clean and responsive UI.
-- Proxy setup for API requests between frontend and backend.
+This project is a full-stack web application designed to demonstrate the power of **Google's Gemini API** in a creative workflow. Users input product details, and the application leverages Gemini to generate highly specific, structured ad copy and corresponding visual prompts for image and video concepts.
 
-## Technical Details
+Users can view the AI-generated copy and test the download functionality for the associated visual assets.
 
-### Frontend
-- Built with React.
-- Components:
-  - `InputForm`: Handles user input and API requests.
-  - `ResultsPage`: Displays generated ads and video.
-- Uses Axios for HTTP requests.
-- Proxy middleware configured to forward API requests to backend.
+---
 
-### Backend
-- Built with Node.js and Express.
-- Provides API endpoints:
-  - `POST /generate-images`: Returns URLs of 3 dummy images.
-  - `POST /generate-video`: Returns URL of a dummy video.
-- Serves HTTPS with self-signed SSL certificates (for development).
-- Logs incoming requests for debugging.
+## ✨ Key Features
 
-### Static Assets
-- Dummy images and video are hosted in the frontend `public` directory.
+* **Gemini API Integration:** Uses the `gemini-2.5-flash` model for generating high-quality, structured JSON containing ad headlines, body copy, and detailed image prompts.
+* **Structured Output:** Generates three distinct image ad variations and one video concept, each with tailored creative copy.
+* **Robust Image Handling:** Uses a **CORS-friendly external placeholder service (`picsum.photos`)** for visual assets, ensuring images are displayed and download buttons are functional.
+* **Client-Side Download:** Implements a robust JavaScript function in the frontend to handle cross-origin downloads (fixing common browser restrictions).
+* **Clean UI:** Responsive React interface for input and results display.
 
-## Setup Instructions
+---
 
-### Backend
-1. Navigate to the `backend` directory.
-2. Generate SSL certificates as per `backend/README_SSL_SETUP.md` (optional for HTTPS).
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the backend server:
-   ```
-   npm start
-   ```
+## 🛠️ Technical Details
 
-### Frontend
-1. Navigate to the `frontend` directory.
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the frontend development server:
-   ```
-   npm start
-   ```
-4. The app will be available at `http://localhost:3000`.
+### Frontend (React)
 
-## Docker Setup
+* **Technology:** Built with React (functional components).
+* **Components:** `InputForm` (handles user input), `ResultsPage` (displays Gemini-generated copy and visual assets).
+* **Libraries:** Uses **Axios** for API requests.
 
-A Dockerfile is included to build and run the application in a containerized environment.
+### Backend (Node.js & Express)
 
-### Build Docker Image
-```
-docker build -t ad-variation-generator .
-```
+* **Technology:** Node.js with Express.
+* **AI Integration:** Uses the **Google Gen AI SDK** (`@google/genai`) to call the Gemini API.
+* **Endpoints:**
+    * `POST /api/generate-images`: Calls Gemini with user inputs, generates structured ad data, pairs it with a working placeholder image URL (`picsum.photos`), and returns the result.
+    * `POST /api/generate-video`: Returns a URL of a functional MP4 video placeholder.
+* **Configuration:** Uses `dotenv` for securing the `GEMINI_API_KEY`.
 
-### Run Docker Container
-```
-docker run -p 3000:3000 -p 5000:5000 ad-variation-generator
-```
+---
 
-## Notes
-- Currently, the image and video generation use dummy static files.
-- The project is structured to allow easy integration of AI-based generation models or APIs in the future.
-- SSL setup is for development only; production should use trusted certificates.
+## ⚙️ Setup Instructions
 
-## Future Improvements
-- Integrate AI image and video generation models.
-- Add customization options for ad generation.
-- Implement A/B testing and analytics.
-- Optimize performance and cost.
+### 1. API Key Setup
+
+1.  Get a Gemini API key from Google AI Studio.
+2.  In the root of your `backend` directory, create a file named `.env`.
+3.  Add your API key **without quotes**:
+    ```
+    GEMINI_API_KEY=AIzaSyB....................................
+    ```
+
+### 2. Backend Setup
+
+1.  Navigate to the `backend` directory.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the backend server:
+    ```bash
+    npm start
+    ```
+    *(The server runs on port **5000**).*
+
+### 3. Frontend Setup
+
+1.  Navigate to the `frontend` directory.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the frontend development server:
+    ```bash
+    npm start
+    ```
+    *(The app will be available at `http://localhost:3000` or `http://127.0.0.1:3000`.*)
+
+---
+
+## 📌 Important Notes
+
+* **Gemini Integration:** The AI is **fully functional** for text generation (Headlines, Body, Prompts).
+* **Visual Assets:** The images and video URLs are **functional placeholders** from external services (e.g., `picsum.photos`). They do **not** match the specific prompts generated by Gemini.
+* **Download Functionality:** The download buttons are functional and will download the placeholder assets, demonstrating that the client-side download logic is correct.
+
+---
 
