@@ -1,4 +1,4 @@
-# Ad Variation Generator 🚀
+# CreativeAI Ads – Image & Video Generation for Marketing 🚀
 
 ## Project Overview
 
